@@ -1,0 +1,9 @@
+app:
+  port: ":4444"
+
+db:
+  host: "localhost"
+  port: "5432"
+  user: "postgres"
+  pass: "root"
+  name: "postgres"

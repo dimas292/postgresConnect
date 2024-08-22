@@ -104,7 +104,7 @@ func main() {
 		fmt.Printf("%+v\n", user)
 	}
 
-	log.Println(strings.Repeat("=", 30), "\n")
+	log.Print(strings.Repeat("=", 30), "\n")
 	// get one by id
 
 	user, err := GetOneById(db, 1)
@@ -114,7 +114,7 @@ func main() {
 	}
 	fmt.Println(strings.Repeat("=", 10), "GET ONE", strings.Repeat("=", 10))
 	fmt.Printf("%+v\n", user)
-	fmt.Println(strings.Repeat("=", 30), "\n")
+	fmt.Print(strings.Repeat("=", 30), "\n")
 
 	// get one end
 
@@ -190,7 +190,7 @@ func GetAll(db *sql.DB) (users []User, err error) {
 	return
 }
 
-func GetOneById(db *sql.DB, id int)(user User, err error){
+func GetOneById(db *sql.DB, id int) (user User, err error) {
 
 	query := `
 	SELECT id, name, email, created_at
@@ -203,6 +203,5 @@ func GetOneById(db *sql.DB, id int)(user User, err error){
 	)
 
 	return
-
 
 }
